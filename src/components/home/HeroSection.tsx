@@ -26,9 +26,9 @@ export function HeroSection() {
           <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
             Experimenta la conexión perfecta entre la ciudad y las islas del Paraná
           </p>
-          <button className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-colors shadow-xl">
+          <a href="#horarios" className="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-colors shadow-xl">
             Ver Horarios
-          </button>
+          </a>
         </div>
       </section>
 
@@ -89,6 +89,187 @@ export function HeroSection() {
               <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                 <span className="text-sm text-gray-500">Capacidad</span>
                 <span className="text-lg font-semibold text-cyan-600">25 pasajeros</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Horarios Section */}
+      <section id="horarios" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h3 className="text-4xl font-bold text-slate-900 text-center mb-12">Horarios de Salida</h3>
+          
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <h4 className="text-2xl font-bold text-slate-900 mb-6">Estación Fluvial</h4>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left">
+                <thead>
+                  <tr className="border-b border-gray-200">
+                    <th className="py-3 px-4 font-semibold text-slate-900">Destino</th>
+                    <th className="py-3 px-4 font-semibold text-slate-900">Salida</th>
+                    <th className="py-3 px-4 font-semibold text-slate-900">Duración</th>
+                    <th className="py-3 px-4 font-semibold text-slate-900">Frecuencia</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">Isla del Inglés</td>
+                    <td className="py-3 px-4">08:00, 10:00, 14:00, 16:00</td>
+                    <td className="py-3 px-4">25 min</td>
+                    <td className="py-3 px-4">Cada 2 horas</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">Isla Gabriel</td>
+                    <td className="py-3 px-4">09:00, 13:00, 17:00</td>
+                    <td className="py-3 px-4">30 min</td>
+                    <td className="py-3 px-4">Cada 4 horas</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4">Playa Los Maderos</td>
+                    <td className="py-3 px-4">07:30, 11:30, 15:30</td>
+                    <td className="py-3 px-4">35 min</td>
+                    <td className="py-3 px-4">Cada 4 horas</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4">Puerto Norte</td>
+                    <td className="py-3 px-4">08:30, 12:30, 16:30</td>
+                    <td className="py-3 px-4">20 min</td>
+                    <td className="py-3 px-4">Cada 4 horas</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tarifas Section */}
+      <section id="tarifas" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h3 className="text-4xl font-bold text-slate-900 text-center mb-12">Tarifas</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h4 className="text-xl font-bold text-slate-900 mb-4">Pasajero</h4>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Ida</span>
+                  <span className="font-semibold text-slate-900">$800</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Ida y Vuelta</span>
+                  <span className="font-semibold text-slate-900">$1.400</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h4 className="text-xl font-bold text-slate-900 mb-4">Vehículo</h4>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Moto</span>
+                  <span className="font-semibold text-slate-900">$1.200</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Auto (hasta 4m)</span>
+                  <span className="font-semibold text-slate-900">$2.500</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h4 className="text-xl font-bold text-slate-900 mb-4">Servicios</h4>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Bicicleta</span>
+                  <span className="font-semibold text-slate-900">$400</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Equipaje extra</span>
+                  <span className="font-semibold text-slate-900">$200</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Paradores Section */}
+      <section id="paradores" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <h3 className="text-4xl font-bold text-slate-900 text-center mb-12">Paradores</h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h4 className="text-xl font-bold text-slate-900 mb-3">Vladimir</h4>
+              <p className="text-gray-600 mb-4">Restaurante tradicional con vista al río. Especialidad en pescado fresco.</p>
+              <div className="flex items-center gap-2 text-sm text-blue-600">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Isla del Inglés</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h4 className="text-xl font-bold text-slate-900 mb-3">Garden</h4>
+              <p className="text-gray-600 mb-4">Cafetería con jardín tropical. Ideal para desayunos y meriendas.</p>
+              <div className="flex items-center gap-2 text-sm text-blue-600">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Isla Gabriel</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h4 className="text-xl font-bold text-slate-900 mb-3">El Muelle</h4>
+              <p className="text-gray-600 mb-4">Bar de playa con música en vivo. Perfecto para atardeceres.</p>
+              <div className="flex items-center gap-2 text-sm text-blue-600">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Playa Los Maderos</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h4 className="text-xl font-bold text-slate-900 mb-3">La Rueda</h4>
+              <p className="text-gray-600 mb-4">Restaurante familiar con platos regionales y postres caseros.</p>
+              <div className="flex items-center gap-2 text-sm text-blue-600">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Puerto Norte</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h4 className="text-xl font-bold text-slate-900 mb-3">Cabaña del Pescador</h4>
+              <p className="text-gray-600 mb-4">Comida casera de mar. Especialidad en pescado frito y ensaladas.</p>
+              <div className="flex items-center gap-2 text-sm text-blue-600">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Ila del Inglés</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <h4 className="text-xl font-bold text-slate-900 mb-3">Paraíso</h4>
+              <p className="text-gray-600 mb-4">Camping con restaurante. Ideal para grupos y familias con niños.</p>
+              <div className="flex items-center gap-2 text-sm text-blue-600">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Isla Gabriel</span>
               </div>
             </div>
           </div>
