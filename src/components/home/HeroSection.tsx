@@ -101,41 +101,53 @@ export function HeroSection() {
           <h3 className="text-4xl font-bold text-slate-900 text-center mb-12">Horarios de Salida</h3>
           
           <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h4 className="text-2xl font-bold text-slate-900 mb-6">Estación Fluvial</h4>
+            <h4 className="text-2xl font-bold text-slate-900 mb-6">Taxi Lanchas - Salida Constante</h4>
             <div className="overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
                   <tr className="border-b border-gray-200">
+                    <th className="py-3 px-4 font-semibold text-slate-900">Taxi Lancha</th>
                     <th className="py-3 px-4 font-semibold text-slate-900">Destino</th>
-                    <th className="py-3 px-4 font-semibold text-slate-900">Salida</th>
-                    <th className="py-3 px-4 font-semibold text-slate-900">Duración</th>
                     <th className="py-3 px-4 font-semibold text-slate-900">Frecuencia</th>
+                    <th className="py-3 px-4 font-semibold text-slate-900">Duración</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-semibold">El Zapito</td>
                     <td className="py-3 px-4">Isla del Inglés</td>
-                    <td className="py-3 px-4">08:00, 10:00, 14:00, 16:00</td>
+                    <td className="py-3 px-4">Cada 20-30 min</td>
                     <td className="py-3 px-4">25 min</td>
-                    <td className="py-3 px-4">Cada 2 horas</td>
                   </tr>
                   <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-semibold">Dino</td>
                     <td className="py-3 px-4">Isla Gabriel</td>
-                    <td className="py-3 px-4">09:00, 13:00, 17:00</td>
+                    <td className="py-3 px-4">Cada 20-30 min</td>
                     <td className="py-3 px-4">30 min</td>
-                    <td className="py-3 px-4">Cada 4 horas</td>
                   </tr>
                   <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-semibold">La Rápida</td>
                     <td className="py-3 px-4">Playa Los Maderos</td>
-                    <td className="py-3 px-4">07:30, 11:30, 15:30</td>
+                    <td className="py-3 px-4">Cada 20-30 min</td>
                     <td className="py-3 px-4">35 min</td>
-                    <td className="py-3 px-4">Cada 4 horas</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-semibold">Isla Verde Express</td>
+                    <td className="py-3 px-4">Isla Verde</td>
+                    <td className="py-3 px-4">Cada 20-30 min</td>
+                    <td className="py-3 px-4">40 min</td>
+                  </tr>
+                  <tr className="border-b border-gray-100">
+                    <td className="py-3 px-4 font-semibold">Puerto Norte</td>
+                    <td className="py-3 px-4">Puerto Norte</td>
+                    <td className="py-3 px-4">Cada 20-30 min</td>
+                    <td className="py-3 px-4">20 min</td>
                   </tr>
                   <tr>
-                    <td className="py-3 px-4">Puerto Norte</td>
-                    <td className="py-3 px-4">08:30, 12:30, 16:30</td>
-                    <td className="py-3 px-4">20 min</td>
-                    <td className="py-3 px-4">Cada 4 horas</td>
+                    <td className="py-3 px-4 font-semibold">Paradise</td>
+                    <td className="py-3 px-4">Varios destinos</td>
+                    <td className="py-3 px-4">Cada 20-30 min</td>
+                    <td className="py-3 px-4">Variable</td>
                   </tr>
                 </tbody>
               </table>
@@ -147,7 +159,7 @@ export function HeroSection() {
       {/* Tarifas Section */}
       <section id="tarifas" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-4xl font-bold text-slate-900 text-center mb-12">Tarifas</h3>
+          <h3 className="text-4xl font-bold text-slate-900 text-center mb-12">Tarifas de Taxi Lanchas</h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -155,11 +167,11 @@ export function HeroSection() {
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Ida</span>
-                  <span className="font-semibold text-slate-900">$800</span>
+                  <span className="font-semibold text-slate-900">$5.000</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Ida y Vuelta</span>
-                  <span className="font-semibold text-slate-900">$1.400</span>
+                  <span className="font-semibold text-slate-900 text-blue-600 text-lg">$10.000</span>
                 </div>
               </div>
             </div>
@@ -169,11 +181,11 @@ export function HeroSection() {
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Moto</span>
-                  <span className="font-semibold text-slate-900">$1.200</span>
+                  <span className="font-semibold text-slate-900">$8.000</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Auto (hasta 4m)</span>
-                  <span className="font-semibold text-slate-900">$2.500</span>
+                  <span className="font-semibold text-slate-900">$15.000</span>
                 </div>
               </div>
             </div>
@@ -183,11 +195,11 @@ export function HeroSection() {
               <div className="space-y-3">
                 <div className="flex justify-between">
                   <span className="text-gray-600">Bicicleta</span>
-                  <span className="font-semibold text-slate-900">$400</span>
+                  <span className="font-semibold text-slate-900">$2.000</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Equipaje extra</span>
-                  <span className="font-semibold text-slate-900">$200</span>
+                  <span className="font-semibold text-slate-900">$1.000</span>
                 </div>
               </div>
             </div>
@@ -257,7 +269,7 @@ export function HeroSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>Ila del Inglés</span>
+                <span>Isla del Inglés</span>
               </div>
             </div>
 
