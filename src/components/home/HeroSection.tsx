@@ -104,6 +104,17 @@ export default function CrucesRosario() {
         ))}
       </div>
 
+      {/* Widget de Adhesión Lateral */}
+      <div className="fixed right-4 top-1/3 z-30 hidden lg:block">
+        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-xl max-w-xs">
+          <h3 className="text-white font-bold text-sm mb-2">¿Tenés un parador o taxi lancha?</h3>
+          <p className="text-white/80 text-xs mb-3">Sumate a Cruces Rosario para ofrecer tus servicios</p>
+          <button className="w-full bg-amber-500/80 text-white px-4 py-2 rounded-lg text-xs font-medium hover:bg-amber-500 transition-colors">
+            Enviar Solicitud
+          </button>
+        </div>
+      </div>
+
       {/* Contenido principal */}
       <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-6 text-center">
         {/* Logo o ícono decorativo */}
@@ -141,11 +152,11 @@ export default function CrucesRosario() {
           Tu conexión con las islas del Paraná
         </p>
 
-        {/* Botones de acción principales */}
-        <div className="flex flex-col sm:flex-row gap-6 mt-8 animate-fade-in-up">
+        {/* Botones de acción principales separados */}
+        <div className="flex flex-col sm:flex-row gap-8 mt-8 animate-fade-in-up">
           <button 
             onClick={() => scrollToSection('horarios')}
-            className="relative overflow-hidden group bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
+            className="relative overflow-hidden group bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
           >
             <span className="relative z-10">Ver Horarios</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -153,7 +164,7 @@ export default function CrucesRosario() {
           
           <button 
             onClick={() => scrollToSection('tarifas')}
-            className="relative overflow-hidden group bg-white/20 backdrop-blur-sm text-white px-10 py-5 rounded-2xl font-bold text-xl border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-white/30"
+            className="relative overflow-hidden group bg-white/20 backdrop-blur-sm text-white px-10 py-5 rounded-2xl font-bold text-lg border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-white/30"
           >
             <span className="relative z-10">Ver Tarifas</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -177,19 +188,6 @@ export default function CrucesRosario() {
             <span className="relative z-10">Estado del Río</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
           </button>
-        </div>
-
-        {/* Widget de adhesión */}
-        <div className="mt-8 animate-fade-in-up">
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 max-w-md">
-            <p className="text-white/90 text-sm font-medium">
-              <span className="text-amber-400">💡</span> ¿Tenés un parador o una lancha para traslados? 
-              <span className="block mt-1">Sumate a nuestra red de servicios.</span>
-            </p>
-            <button className="mt-3 bg-amber-500/80 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-amber-500 transition-colors">
-              Solicitar Adhesión
-            </button>
-          </div>
         </div>
 
         {/* Botón de scroll */}
@@ -265,7 +263,7 @@ export default function CrucesRosario() {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border border-white/20">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Pasajero</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
@@ -279,7 +277,7 @@ export default function CrucesRosario() {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border border-white/20">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Servicios</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
