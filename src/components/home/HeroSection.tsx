@@ -20,15 +20,14 @@ export default function CrucesRosario() {
 
   return (
     <main className="relative min-h-[200vh] overflow-hidden">
-      {/* Fondo de bosque con lago desenfocado */}
+      {/* Fondo estático de bosque con lago desenfocado */}
       <div className="fixed inset-0 z-0">
-        {/* Imagen de fondo con efecto blur */}
+        {/* Imagen de fondo con efecto blur estático */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop')`,
             filter: "blur(3px)",
-            transform: `scale(1.1) translateY(${scrollY * 0.3}px)`,
           }}
         />
         {/* Overlay oscuro para mejor contraste */}
@@ -143,10 +142,10 @@ export default function CrucesRosario() {
         </p>
 
         {/* Botones de acción principales */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in-up">
+        <div className="flex flex-col sm:flex-row gap-6 mt-8 animate-fade-in-up">
           <button 
             onClick={() => scrollToSection('horarios')}
-            className="relative overflow-hidden group bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-8 py-3 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
+            className="relative overflow-hidden group bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-12 py-4 rounded-full font-bold text-xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
           >
             <span className="relative z-10">Ver Horarios</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -154,7 +153,7 @@ export default function CrucesRosario() {
           
           <button 
             onClick={() => scrollToSection('tarifas')}
-            className="relative overflow-hidden group bg-white/20 backdrop-blur-sm text-white px-8 py-3 rounded-full font-bold text-lg border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-white/30"
+            className="relative overflow-hidden group bg-white/20 backdrop-blur-sm text-white px-12 py-4 rounded-full font-bold text-xl border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-white/30"
           >
             <span className="relative z-10">Ver Tarifas</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -162,10 +161,10 @@ export default function CrucesRosario() {
         </div>
 
         {/* Botones secundarios */}
-        <div className="flex flex-col sm:flex-row gap-3 mt-4">
+        <div className="flex flex-col sm:flex-row gap-4 mt-4">
           <button 
             onClick={() => scrollToSection('paradores')}
-            className="relative overflow-hidden group bg-white/10 backdrop-blur-sm text-white px-6 py-2 rounded-full font-medium text-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:bg-white/20"
+            className="relative overflow-hidden group bg-white/10 backdrop-blur-sm text-white px-10 py-3 rounded-full font-bold text-base border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:bg-white/20"
           >
             <span className="relative z-10">Paradores</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -173,11 +172,24 @@ export default function CrucesRosario() {
           
           <button 
             onClick={() => scrollToSection('estado')}
-            className="relative overflow-hidden group bg-green-600/80 backdrop-blur-sm text-white px-6 py-2 rounded-full font-medium text-sm border border-green-400/30 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:bg-green-600/90"
+            className="relative overflow-hidden group bg-green-600/80 backdrop-blur-sm text-white px-10 py-3 rounded-full font-bold text-base border border-green-400/30 shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105 hover:bg-green-600/90"
           >
             <span className="relative z-10">Estado del Río</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-400/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
           </button>
+        </div>
+
+        {/* Sugerencia de adhesion */}
+        <div className="mt-8 animate-fade-in-up">
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 max-w-md">
+            <p className="text-white/90 text-sm font-medium">
+              <span className="text-amber-400">💡</span> ¿Tienes un parador o lancha para hacer traslados? 
+              <span className="block mt-1">Contáctanos para ser parte de nuestra red.</span>
+            </p>
+            <button className="mt-3 bg-amber-500/80 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-amber-500 transition-colors">
+              Contactar
+            </button>
+          </div>
         </div>
 
         {/* Botón de scroll */}
@@ -252,45 +264,31 @@ export default function CrucesRosario() {
             Tarifas de Taxi Lanchas
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <h3 className="text-xl font-bold text-white mb-4">Pasajero</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-white/80">Ida</span>
-                  <span className="font-semibold text-white">$5.000</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Pasajero</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-white/80 text-lg">Ida</span>
+                  <span className="font-semibold text-white text-xl">$5.000</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-white/80">Ida y Vuelta</span>
-                  <span className="font-semibold text-amber-400 text-lg">$10.000</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <h3 className="text-xl font-bold text-white mb-4">Vehículo</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-white/80">Moto</span>
-                  <span className="font-semibold text-white">$8.000</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-white/80">Auto (hasta 4m)</span>
-                  <span className="font-semibold text-white">$15.000</span>
+                <div className="flex justify-between items-center">
+                  <span className="text-white/80 text-lg">Ida y Vuelta</span>
+                  <span className="font-semibold text-amber-400 text-2xl">$10.000</span>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <h3 className="text-xl font-bold text-white mb-4">Servicios</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between">
-                  <span className="text-white/80">Bicicleta</span>
-                  <span className="font-semibold text-white">$2.000</span>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Servicios</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-white/80 text-lg">Bicicleta</span>
+                  <span className="font-semibold text-white text-xl">$2.000</span>
                 </div>
-                <div className="flex justify-between">
-                  <span className="text-white/80">Equipaje extra</span>
-                  <span className="font-semibold text-white">$1.000</span>
+                <div className="flex justify-between items-center">
+                  <span className="text-white/80 text-lg">Equipaje extra</span>
+                  <span className="font-semibold text-white text-xl">$1.000</span>
                 </div>
               </div>
             </div>
