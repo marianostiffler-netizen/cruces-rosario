@@ -5,9 +5,9 @@ import { useEffect, useState } from "react"
 export default function CrucesRosario() {
   const [showContactModal, setShowContactModal] = useState(false)
   const [formData, setFormData] = useState({
-    name: '',
+    nombre: '',
     email: '',
-    phone: ''
+    telefono: ''
   })
 
   useEffect(() => {
@@ -37,10 +37,10 @@ export default function CrucesRosario() {
     e.preventDefault()
     // Aquí puedes enviar los datos a tu backend o servicio
     console.log('Datos del formulario:', formData)
-    alert(`¡Gracias ${formData.name}! Hemos recibido tu solicitud. Te contactaremos pronto.`)
+    alert(`¡Gracias ${formData.nombre}! Hemos recibido tu solicitud. Te contactaremos pronto.`)
     
     // Resetear formulario y cerrar modal
-    setFormData({ name: '', email: '', phone: '' })
+    setFormData({ nombre: '', email: '', telefono: '' })
     setShowContactModal(false)
   }
 
@@ -184,18 +184,18 @@ export default function CrucesRosario() {
 
         {/* Botones de acción principales - GRANDES Y SEPARADOS */}
         <div 
-          className="flex flex-col gap-10 mt-8 animate-fade-in-up"
+          className="flex flex-col gap-16 mt-8 animate-fade-in-up"
           style={{
-            gap: '2.5rem'
+            gap: '3rem'
           }}
         >
           <button 
             onClick={() => scrollToSection('horarios')}
             className="relative overflow-hidden group bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-bold shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
             style={{
-              padding: '1.5rem 3rem',
-              fontSize: '1.25rem',
-              borderRadius: '0.75rem'
+              padding: '1.8rem 3.6rem',
+              fontSize: '1.5rem',
+              borderRadius: '0.9rem'
             }}
           >
             <span className="relative z-10">Ver Horarios</span>
@@ -206,9 +206,9 @@ export default function CrucesRosario() {
             onClick={() => scrollToSection('tarifas')}
             className="relative overflow-hidden group bg-white/20 backdrop-blur-sm text-white font-bold border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-white/30"
             style={{
-              padding: '1.5rem 3rem',
-              fontSize: '1.25rem',
-              borderRadius: '0.75rem'
+              padding: '1.8rem 3.6rem',
+              fontSize: '1.5rem',
+              borderRadius: '0.9rem'
             }}
           >
             <span className="relative z-10">Ver Tarifas</span>
@@ -512,16 +512,21 @@ export default function CrucesRosario() {
             </div>
 
             {/* Formulario */}
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form 
+              action="https://formspree.io/f/mpqprdyz" 
+              method="POST"
+              onSubmit={handleSubmit} 
+              className="space-y-4"
+            >
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">
                   Nombre y Apellido
                 </label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
+                  id="nombre"
+                  name="nombre"
+                  value={formData.nombre}
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
@@ -546,14 +551,14 @@ export default function CrucesRosario() {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="telefono" className="block text-sm font-medium text-gray-700 mb-1">
                   Número de Teléfono
                 </label>
                 <input
                   type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
+                  id="telefono"
+                  name="telefono"
+                  value={formData.telefono}
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
