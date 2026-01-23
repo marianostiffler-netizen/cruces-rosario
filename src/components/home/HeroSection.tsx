@@ -152,11 +152,23 @@ export default function CrucesRosario() {
           Tu conexión con las islas del Paraná
         </p>
 
-        {/* Botones de acción principales separados */}
-        <div className="flex flex-col sm:flex-row gap-8 mt-8 animate-fade-in-up">
+        {/* Botones de acción principales - ESTILOS FORZADOS */}
+        <div 
+          className="flex flex-col gap-8 mt-8 animate-fade-in-up"
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '2rem'
+          }}
+        >
           <button 
             onClick={() => scrollToSection('horarios')}
-            className="relative overflow-hidden group bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
+            className="relative overflow-hidden group bg-gradient-to-r from-amber-500 to-yellow-500 text-white font-bold shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105"
+            style={{
+              padding: '24px 48px',
+              fontSize: '1.5rem',
+              borderRadius: '1rem'
+            }}
           >
             <span className="relative z-10">Ver Horarios</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -164,7 +176,12 @@ export default function CrucesRosario() {
           
           <button 
             onClick={() => scrollToSection('tarifas')}
-            className="relative overflow-hidden group bg-white/20 backdrop-blur-sm text-white px-10 py-5 rounded-2xl font-bold text-lg border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-white/30"
+            className="relative overflow-hidden group bg-white/20 backdrop-blur-sm text-white font-bold border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:bg-white/30"
+            style={{
+              padding: '24px 48px',
+              fontSize: '1.5rem',
+              borderRadius: '1rem'
+            }}
           >
             <span className="relative z-10">Ver Tarifas</span>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -255,7 +272,7 @@ export default function CrucesRosario() {
         </div>
       </section>
 
-      {/* Sección de Tarifas */}
+      {/* Sección de Tarifas - SIN VEHÍCULOS */}
       <section id="tarifas" className="relative z-20 min-h-screen flex items-center justify-center px-6 py-20">
         <div className="backdrop-blur-md bg-white/10 rounded-3xl p-12 max-w-4xl border border-white/20 shadow-2xl">
           <h2 className="text-3xl md:text-4xl text-white font-light mb-8 text-balance">
@@ -438,6 +455,25 @@ export default function CrucesRosario() {
           </div>
         </div>
       </section>
+
+      {/* ADHESIÓN FORZADA ANTES DEL FOOTER */}
+      <div className="relative z-20 py-20 px-6">
+        <div 
+          className="max-w-4xl mx-auto p-8 rounded-2xl text-center"
+          style={{
+            backgroundColor: '#ffffff',
+            color: '#000000'
+          }}
+        >
+          <h2 className="text-3xl font-bold mb-4">¿SOS TAXI LANCHA O PARADOR?</h2>
+          <p className="text-xl mb-6">UNITE AQUÍ</p>
+          <button 
+            className="bg-black text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-800 transition-colors"
+          >
+            Contactar Ahora
+          </button>
+        </div>
+      </div>
     </main>
   )
 }
